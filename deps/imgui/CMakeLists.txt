@@ -22,6 +22,11 @@ if("${POLYSCOPE_BACKEND_OPENGL3_GLFW}")
   # imgui sources
   list(APPEND SRCS imgui/imgui.cpp imgui/imgui_draw.cpp imgui/imgui_tables.cpp imgui/imgui_widgets.cpp imgui/imgui_demo.cpp imgui/backends/imgui_impl_glfw.cpp imgui/backends/imgui_impl_opengl3.cpp)
 
+  # ------------------------------------------------------
+  # HACKY PATCH TO INCLUDE IMGUI STDLIB
+  # ------------------------------------------------------
+  list(APPEND SRCS imgui/misc/cpp/imgui_stdlib.cpp)
+
   # implot sources
   list(APPEND SRCS 
           implot/implot.cpp
